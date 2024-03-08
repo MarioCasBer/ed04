@@ -7,7 +7,7 @@ import java.util.List;
  * Esta clase permite crear contactos y almacenar sus datos. Estos contactos podrán almacenarse en una lista o agenda.
  * @author mario
  */
-class Contacto {
+class Persona {
     private String name;
     private List<String> phones;
 
@@ -16,7 +16,7 @@ class Contacto {
      * @param name
      * @param phone
      */
-    public Contacto(String name, String phone) {
+    public Persona(String name, String phone) {
         this.name = name;
         this.phones = new ArrayList<>();
         this.phones.add(phone);

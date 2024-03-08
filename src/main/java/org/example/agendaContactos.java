@@ -9,7 +9,7 @@ import java.util.List;
  * @author mario
  */
 public class agendaContactos {
-    private List<Contacto> contacts; // Lista de Contacto
+    private List<Persona> contacts; // Lista de Contacto
 
     /**
      * Este método es un constructor de la clase agenda por defecto.
@@ -25,7 +25,7 @@ public class agendaContactos {
      */
     public void addContact(String name, String phone) {
         boolean exists = false;
-        for (Contacto c : contacts) {
+        for (Persona c : contacts) {
             if (c.getName().equalsIgnoreCase(name)) {
                 exists = true;
                 c.getPhones().add(phone);
@@ -34,7 +34,7 @@ public class agendaContactos {
         }
 
         if (!exists) {
-            Contacto newContact = new Contacto(name, phone);
+            Persona newContact = new Persona(name, phone);
             contacts.add(newContact);
         }
     }
@@ -44,10 +44,10 @@ public class agendaContactos {
      * @param name
      */
     public void removeContact(String name) {
-        Iterator<Contacto> it = contacts.iterator();
+        Iterator<Persona> it = contacts.iterator();
 
         while (it.hasNext()) {
-            Contacto c = it.next();
+            Persona c = it.next();
 
             if (c.getName().equalsIgnoreCase(name)) {
                 it.remove();
@@ -62,7 +62,7 @@ public class agendaContactos {
      * @param newPhone
      */
     public void modifyPhoneNumber(String name, String oldPhone, String newPhone) {
-        for (Contacto c : contacts) {
+        for (Persona c : contacts) {
             if (c.getName().equalsIgnoreCase(name)) {
                 List<String> phones = c.getPhones();
 
@@ -79,7 +79,7 @@ public class agendaContactos {
      * Método para obtener un contacto de la agenda.
      * @return
      */
-    public List<Contacto> getContacts() {
+    public List<Persona> getContacts() {
         return this.contacts;
     }
 
@@ -87,7 +87,7 @@ public class agendaContactos {
      * Método para establecer un contacto.
      * @param contacts
      */
-    public void setContacts(List<Contacto> contacts) {
+    public void setContacts(List<Persona> contacts) {
         this.contacts = contacts;
     }
 }
