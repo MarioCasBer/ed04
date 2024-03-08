@@ -56,4 +56,8 @@ public class Agenda {
     public List<Contacto> getContacts() {
         return this.contacts;
     }
+
+    public void setContacts(List<Contacto> contacts) {
+        this.contacts = contacts;
+    }
 }
