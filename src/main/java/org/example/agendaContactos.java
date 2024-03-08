@@ -8,13 +8,13 @@ import java.util.List;
  * Esta clase crea una lista de contactos y las almacena para su posterior acceso y uso.
  * @author mario
  */
-public class Agenda {
+public class agendaContactos {
     private List<Contacto> contacts; // Lista de Contacto
 
     /**
      * Este método es un constructor de la clase agenda por defecto.
      */
-    public Agenda() {
+    public agendaContactos() {
         this.contacts = new ArrayList<>();
     }
 
