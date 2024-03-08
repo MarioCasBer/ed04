@@ -37,4 +37,12 @@ class Persona {
     public List<String> getPhones() {
         return this.phones;
     }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setPhones(List<String> phones) {
+        this.phones = phones;
+    }
 }
