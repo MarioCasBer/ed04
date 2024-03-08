@@ -8,7 +8,7 @@ import java.util.List;
  * Esta clase crea una lista de contactos y las almacena para su posterior acceso y uso.
  * @author mario
  */
-public class agendaContactos {
+public class agendaContactos implements IagendaContactos {
     private List<Persona> contacts; // Lista de Contacto
 
     /**
@@ -23,6 +23,7 @@ public class agendaContactos {
      * @param name
      * @param phone
      */
+    @Override
     public void addContact(String name, String phone) {
         boolean exists = false;
         for (Persona c : contacts) {
@@ -43,6 +44,7 @@ public class agendaContactos {
      * Método para eliminar contactos de la agenda.
      * @param name
      */
+    @Override
     public void removeContact(String name) {
         Iterator<Persona> it = contacts.iterator();
 
@@ -61,6 +63,7 @@ public class agendaContactos {
      * @param oldPhone
      * @param newPhone
      */
+    @Override
     public void modifyPhoneNumber(String name, String oldPhone, String newPhone) {
         for (Persona c : contacts) {
             if (c.getName().equalsIgnoreCase(name)) {
@@ -79,6 +82,7 @@ public class agendaContactos {
      * Método para obtener un contacto de la agenda.
      * @return
      */
+    @Override
     public List<Persona> getContacts() {
         return this.contacts;
     }
@@ -87,6 +91,7 @@ public class agendaContactos {
      * Método para establecer un contacto.
      * @param contacts
      */
+    @Override
     public void setContacts(List<Persona> contacts) {
         this.contacts = contacts;
     }
